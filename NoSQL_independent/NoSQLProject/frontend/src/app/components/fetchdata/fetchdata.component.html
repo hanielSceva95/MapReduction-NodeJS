@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <th>Author ID</th>
+        <th> Author Name</th>
+        <th>Region</th>
+        <th>Language</th>
+        <th>----------</th>
+        <th>Number of tweets</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let eachDocument of fetchedData">
+            <td>{{eachDocument.value.external_author_id}}&nbsp;</td>
+            <td>{{eachDocument.value.author}}</td>
+            <td>{{eachDocument.value.region}}</td>
+            <td>{{eachDocument.value.language}}</td>
+            <td>------------------------------</td>
+            <td>{{eachDocument.value.count}}</td>
+        </tr>
+    </tbody>
+</table>

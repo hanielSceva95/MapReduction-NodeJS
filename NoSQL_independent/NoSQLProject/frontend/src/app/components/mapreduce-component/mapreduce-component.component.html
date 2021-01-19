@@ -1,0 +1,14 @@
+<img *ngIf="loading" class="spinner" src="assets/spinner-gif.gif">
+<div class="mapreduce">
+    <p> This is a NoSQL Project where Map reduction is performed for a Troll dataset with respect to the tweet's
+        AuthorID</p>
+    <p>Initially we have a dataset which contians 3 million troll tweets.</p>
+    <p>These tweets were tweeted by many people over the period 19 June'15, to 31 Dec'17.</p>
+    <p>From here we'll be performing the map reduction by click the below button.</p>
+    <button class="button" (click)="performMapReduce()">Perform MapReduce</button>
+    <div *ngIf="mapReducedFlag">
+        <h2 class="header">Map Reduce is completed</h2>
+        <p>Click below to fetch the reduced data</p>
+        <button class="button" routerLink='/fetchData' routerLinkActive='active'>Fetch the reduced data</button>
+    </div>
+</div>
